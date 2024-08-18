@@ -101,23 +101,43 @@ $ npm run dev
 ## Ekran Görüntüleri
 ### Masaüstü Versiyonu
 **Login**
+
 ![enter image description here](https://raw.githubusercontent.com/hasanyurdakul/planescape-case-study/main/screenshots/desktop/loginPageDesktop.png)
+
 **Register**
+
 ![enter image description here](https://raw.githubusercontent.com/hasanyurdakul/planescape-case-study/main/screenshots/desktop/registerPageDesktop.png)
+
 **Anasayfa**
+
 ![enter image description here](https://raw.githubusercontent.com/hasanyurdakul/planescape-case-study/main/screenshots/desktop/homePageDesktop.png)
+
 **Uçuşlarım Sayfası**
+
 ![enter image description here](https://raw.githubusercontent.com/hasanyurdakul/planescape-case-study/main/screenshots/desktop/myFlightsPageDesktop.png)
+
 ### Mobil Versiyonu
+
 **Login**
+
 <img src="https://raw.githubusercontent.com/hasanyurdakul/planescape-case-study/main/screenshots/mobile/loginPageMobile.png" alt="drawing" width="400"/>
+
 **Register**
+
 <img src="https://raw.githubusercontent.com/hasanyurdakul/planescape-case-study/main/screenshots/mobile/registerPageMobie.png" alt="drawing" width="400"/>
+
 **Anasayfa - 1**
+
 <img src="https://raw.githubusercontent.com/hasanyurdakul/planescape-case-study/main/screenshots/mobile/homePageMobile1.png" alt="drawing" width="400"/>
+
 **Anasayfa - 2**
+
 <img src="https://raw.githubusercontent.com/hasanyurdakul/planescape-case-study/main/screenshots/mobile/homePageMobile2.png" alt="drawing" width="400"/>
+
 **Uçuşlarım Sayfası - 1 **
+
 <img src="https://raw.githubusercontent.com/hasanyurdakul/planescape-case-study/main/screenshots/mobile/myFlightsPageMobile1.png" alt="drawing" width="400"/>
+
 **Uçuşlarım Sayfası - 2 **
+
 <img src="https://raw.githubusercontent.com/hasanyurdakul/planescape-case-study/main/screenshots/mobile/myFlightsPageMobile2.png" alt="drawing" width="400"/>
