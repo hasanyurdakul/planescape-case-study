@@ -126,18 +126,18 @@ $ npm run dev
 
 <img src="https://raw.githubusercontent.com/hasanyurdakul/planescape-case-study/main/screenshots/mobile/registerPageMobie.png" alt="drawing" width="400"/>
 
-**Anasayfa - 1**
+**Anasayfa** - 1
 
 <img src="https://raw.githubusercontent.com/hasanyurdakul/planescape-case-study/main/screenshots/mobile/homePageMobile1.png" alt="drawing" width="400"/>
 
-**Anasayfa - 2**
+**Anasayfa** - 2
 
 <img src="https://raw.githubusercontent.com/hasanyurdakul/planescape-case-study/main/screenshots/mobile/homePageMobile2.png" alt="drawing" width="400"/>
 
-**Uçuşlarım Sayfası - 1 **
+**Uçuşlarım Sayfası** - 1 
 
 <img src="https://raw.githubusercontent.com/hasanyurdakul/planescape-case-study/main/screenshots/mobile/myFlightsPageMobile1.png" alt="drawing" width="400"/>
 
-**Uçuşlarım Sayfası - 2 **
+**Uçuşlarım Sayfası** - 2
 
 <img src="https://raw.githubusercontent.com/hasanyurdakul/planescape-case-study/main/screenshots/mobile/myFlightsPageMobile2.png" alt="drawing" width="400"/>
