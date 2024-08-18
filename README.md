@@ -42,7 +42,7 @@ Bu proje, Schiphol havalimanı API'sini kullanarak uçuş bilgilerini listeleyen
 
 ```bash
 
-git  clone  https://github.com/kullaniciadi/ucus-rezervasyon-uygulamasi.git
+git  clone  https://github.com/hasanyurdakul/planescape-case-study.git
 
 ```
 
