@@ -1,6 +1,11 @@
 import axios from "axios";
 import { getData } from "./fetchWrapper";
 
+// ######################################################################
+// API'dan gelen prefixICAO kodunu kullanarak havayolu adını getirir.
+// API'da bulunan /airlines/:prefixICAO endpoint'ini kullanarak havayolu adını alırız.
+// ######################################################################
+
 export const airlineNameParser = async (prefixICAO) => {
   let airline;
   try {

@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const validator = require("validator");
 const bcrypt = require("bcryptjs");
 
+// User modeli
 const userSchema = new mongoose.Schema({
   username: {
     type: String,

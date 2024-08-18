@@ -6,6 +6,7 @@ const initialState = {
   email: "",
 };
 
+// userSlice içerisinde userLogin ve userLogout adında iki adet action tanımlanır. Böylece kullanıcı giriş ve çıkış işlemleri gerçekleştirilebilir.
 export const userSlice = createSlice({
   name: "user",
   initialState,

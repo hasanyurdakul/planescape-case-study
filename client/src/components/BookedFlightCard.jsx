@@ -4,6 +4,13 @@ import React from "react";
 import { getToken } from "../utils/auth";
 import { toast } from "react-toastify";
 
+// ######################################################################
+// BookedFlightCard componenti, kullanıcının rezerve ettiği uçuşları gösteren kart componentidir.
+// /myflights routeunda kullanılır.
+// Kullanıcı uçuşu iptal etmek için "Cancel Flight" butonuna tıklar.
+// Kullanıcı "Cancel Flight" butonuna tıkladığında, uçuş mongo veritabanından ve kullanıcıya bir bildirim gösterilir.
+// ######################################################################
+
 function BookedFlightCard({ flight, onFlightRemoved }) {
   const nodeApiUrl = import.meta.env.VITE_NODE_API_URL;
 

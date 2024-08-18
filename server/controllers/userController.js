@@ -1,5 +1,6 @@
 const User = require("../models/userModel");
 
+// Kullanıcının uçuşlarını getirir.
 const getUserFlights = async (req, res) => {
   try {
     const userId = req.user.userId;
@@ -18,6 +19,7 @@ const getUserFlights = async (req, res) => {
   }
 };
 
+// Kullanıcıdan uçuşu kaldırır.
 const removeFlight = async (req, res) => {
   try {
     const userId = req.user.userId;

@@ -6,6 +6,10 @@ import { userLogin, userLogout } from "./redux/features/userSlice";
 import { getToken } from "./utils/auth";
 import { jwtDecode } from "jwt-decode"; // Make sure the import is correct
 
+// ######################################################################
+// Uygulama renderlandığında basit bir token kontrolü yapılır. Eğer token varsa, decode edilir ve kullanıcı bilgileri alınır. Redux store'a dispatch edilir. Uygulamanın geri kalanında bu state kullanılabilir.
+// ######################################################################
+
 function App() {
   const dispatch = useDispatch();
   const token = getToken();

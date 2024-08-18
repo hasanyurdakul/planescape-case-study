@@ -9,6 +9,15 @@ import { getToken } from "../utils/auth";
 import { jwtDecode } from "jwt-decode"; // Corrected import statement
 import axios from "axios";
 
+// ######################################################################
+// MyFlightsPage componenti, kullanıcının rezerve ettiği uçuşları gösterir.
+// Kullanıcı, rezerve ettiği uçuşları görebilir ve uçuşları silebilir.
+// Kullanıcı, rezerve ettiği uçuşların toplam fiyatını görebilir.
+// Herhangi bir uçuş silindiğinde, başarılı olduysa toast ile kullanıcıya geribildirim verilir ve sayfa rerender olarak toplam fiyat güncellenir.
+// Kullanıcı, login olmadan bu sayfayı göremez. Eğer kullanıcı login değilse, login sayfasına yönlendirilir.
+// Üst barda bulunan filtreleme butonları aktif değildir. Arayüze birebir uyabilmek için eklenmişlerdir.
+// ######################################################################
+
 function MyFlightsPage() {
   const [bookedFlights, setBookedFlights] = useState([]);
   const [totalTicketPrice, setTotalTicketPrice] = useState(0); // Toplam bilet fiyatı için state
@@ -18,9 +27,11 @@ function MyFlightsPage() {
   const nodeApiUrl = import.meta.env.VITE_NODE_API_URL;
 
   useEffect(() => {
+    // Kullanıcı login değilse, login sayfasına yönlendirilir
     if (!isLoggedIn) {
       navigate("/login");
     }
+    // Kullanıcının rezerve ettiği uçuşları getirir. JWT token request header'a eklenir.
     axios
       .get(`${nodeApiUrl}/user/flights`, {
         headers: {
@@ -45,13 +56,13 @@ function MyFlightsPage() {
     setTotalTicketPrice(totalPrice);
   };
 
-  // Flight removal handler
+  // Cancel flight butonuna basıldığında çalışan fonksiyon
   const handleFlightRemoved = (flightId) => {
     const updatedFlights = bookedFlights.filter(
       (flight) => flight._id !== flightId
     );
     setBookedFlights(updatedFlights);
-    calculateTotalTicketPrice(updatedFlights); // Update the total price
+    calculateTotalTicketPrice(updatedFlights); // Toplam fiyat tekrardan hesaplanır
   };
 
   return (

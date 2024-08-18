@@ -4,6 +4,10 @@ var appId = import.meta.env.VITE_AIR_APP_ID;
 var appKey = import.meta.env.VITE_AIR_APP_KEY;
 var baseUrl = import.meta.env.VITE_AIR_BASE_URL;
 
+// ######################################################################
+// API'dan veri çekmek için kullanılan wrapper fonksiyon
+// ######################################################################
+
 const fetchWrapper = axios.create({
   baseURL: baseUrl,
   headers: {
@@ -14,6 +18,7 @@ const fetchWrapper = axios.create({
   },
 });
 
+// API'dan veri çekme işlemi
 export const getData = async (endpoint) => {
   try {
     const response = await fetchWrapper.get(endpoint);
@@ -23,7 +28,3 @@ export const getData = async (endpoint) => {
     throw error;
   }
 };
-
-// getData('/your-endpoint')
-//     .then(data => console.log(data))
-//     .catch(error => console.error(error));

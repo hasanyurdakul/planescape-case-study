@@ -1,5 +1,9 @@
-import axios from "axios";
 import { getData } from "./fetchWrapper";
+
+// ######################################################################
+// Uçuş içindeki destinasyonun adını almak için kullanılan fonksiyon
+// API'da bulunan /destinations/:id endpoint'ini kullanarak destinasyonun adını alırız.
+// ######################################################################
 
 export const getLocationName = async (flight) => {
   let locationName;

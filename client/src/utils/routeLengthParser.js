@@ -1,3 +1,7 @@
+// ######################################################################
+// Flight içindeki route array'inin uzunluğuna göre durak sayısını belirleyen fonksiyon.
+// ######################################################################
+
 export const routeLengthParser = (arr) => {
   switch (arr.length) {
     case 1:

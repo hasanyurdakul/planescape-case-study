@@ -9,6 +9,16 @@ import { toast } from "react-toastify";
 import { dateTimeSubtractor } from "../utils/dateTimeSubtractor";
 import { airportCodes } from "../utils/airportCodes";
 
+// ######################################################################
+// BookYourFlightCard componenti, uçuş arama kartıdır.
+// Anasayfada kullanılır.
+// Kullanıcıdan kalkış ve varış havaalanı, kalkış ve varış tarihleri alınır.
+// Kullanıcı uçuş aramak için "Show flights" butonuna tıklar.
+// Kullanıcı uçuş aramak için "Show flights" butonuna tıkladığında, uçuşlar listelenir.
+// API'dan kaynaklanan sınırlamadan dolayı, maksimum 3 günlük uçuş araması yapılabilir.
+// API'dan kaynaklanan sınırlamadan dolayı, varış lokasyonu ya da kalkış lokasyonu seçilemez. Bu nedenle sadece bir adet havaalanı seçilebilir. Diğer havalimanı varsayılan olarak AMS (Amsterdam) olarak ayarlanmıştır.
+// ######################################################################
+
 function BookYourFlightCard({ query, setQuery }) {
   const newDate = new Date();
   const nextDay = new Date(newDate);

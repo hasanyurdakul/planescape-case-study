@@ -1,6 +1,7 @@
-"use client";
-import React, { useEffect } from "react";
-import DirectionsCarFilledOutlinedIcon from "@mui/icons-material/DirectionsCarFilledOutlined";
+// ######################################################################
+// VerticalCardItem componenti, bir resim ve başlık alanı olan bir kart componentidir.
+// Uygulama içinde sağda bulunan 3 adet kart componenti için kullanılır.
+// ######################################################################
 
 function VerticalCardItem({ src, icon, title }) {
   return (
@@ -10,7 +11,6 @@ function VerticalCardItem({ src, icon, title }) {
         src={src}
         alt="Random image"
       />
-      {/* <div className="absolute inset-0  bg-gray-700 opacity-60 rounded-md"></div> */}
       <div className="absolute left-0 bottom-0 flex flex-col items-start p-4 justify-center">
         <div className="text-white text-6xl">{icon}</div>
         <h2 className="text-white text-2xl font-bold uppercase">{title}</h2>

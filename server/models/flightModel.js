@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+// Schipnol API'dan gelen verileri backendde saklamak için oluşturulan model
 const flightSchema = new mongoose.Schema({
   flightName: {
     type: String,

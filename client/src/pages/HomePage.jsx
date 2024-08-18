@@ -5,7 +5,22 @@ import FlightSorter from "../components/FlightSorter";
 import VerticalCardsWrapper from "../components/VerticalCardsWrapper";
 import { getData } from "../utils/fetchWrapper";
 
+// ######################################################################
+// HomePage componenti, anasayfa componentidir.
+// query stati burda tutulur ve BookYourFlightCard componentine prop olarak geçilir.
+// query state'i değiştiğinde useEffect çalışır ve API'dan veri çeker.
+// flights state'i burda tutulur ve FlightCardsWrapper componentine prop olarak geçilir.
+// flights state'i değiştiğinde FlightCardsWrapper componenti rerender olur.
+// Kullanıcı, uçuşları filtrelemek ve sıralamak için FlightSorter componentini kullanabilir.
+// Sorting yapabilmesi için FlightSorter componentine prop olarak flights ve setFlights geçilir.
+// Kullanıcı, uçuş aramalarını yapmak için BookYourFlightCard componentini kullanabilir.
+// API'dan gelen uçuşlar, FlightCardsWrapper componenti içinde gösterilir.
+// Dikey kartlar, VerticalCardsWrapper componenti içinde gösterilir.
+// ######################################################################
+
 export default function HomePage() {
+  // query state'i, API'dan veri çekmek için kullanılır.
+  // Varsayılan olarak operational ve delay olmayan uçuşları getirir. Bu sayede kullanıcıya rezervasyon yapabileceği uçuşlar gösterilir.
   const [query, setQuery] = useState(
     "/flights?isOperationalFlight=true&includedelays=false&"
   );
@@ -20,7 +35,7 @@ export default function HomePage() {
         })
         .catch((error) => console.error(error));
     }
-  }, [query]); // Include query in the dependency array
+  }, [query]); // query değiştiğinde useEffect çalışması için dependency olarak eklenir.
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-5 gap-4 ">

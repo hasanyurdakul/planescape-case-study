@@ -23,6 +23,16 @@ const loginValidationSchema = Yup.object().shape({
     .oneOf([Yup.ref("password"), null], "Passwords must match"),
 });
 
+// ######################################################################
+// RegisterPage componenti, kullanıcının uygulamaya kayıt olabileceği ekranı gösterir.
+// Kullanıcı, username, email ve password bilgilerini girerek kayıt olabilir.
+// Password ve Confirm Password alanları eşleşmiyorsa, hata mesajı gösterilir.
+// Kullanıcı, kayıt olursa, toast mesajı gösterilir ve login sayfasına yönlendirilir.
+// Aynı email veya username ile kayıt olma durumunda, hata mesajı gösterilir.
+// Kayıt işlemi başarısız olursa, hata için toast mesajı gösterilir.
+// Formik ve yup paketleri kullanarak form submit ve validation işlemleri yapılır.
+// ######################################################################
+
 function RegisterPage() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");

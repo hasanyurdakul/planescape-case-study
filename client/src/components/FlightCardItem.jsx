@@ -14,6 +14,13 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
+// ######################################################################
+// FlightCardItem componenti, bir uçuşun detaylarını gösteren kart componentidir.
+// FlightCardsWrapper componenti içinde kullanılır.
+// Uçuş kartlarında uçuş bilgileri, uçuş süresi, fiyat ve book flight butonu bulunur.
+// Book flight butonuna tıklandığında, kullanıcı uçuşu mongodb veritabanına kaydedebilir.
+// ######################################################################
+
 function FlightCardItem({ flight }) {
   const [loading, setLoading] = useState(true);
   const [airlineName, setAirlineName] = useState("Unknown");

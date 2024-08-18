@@ -1,26 +1,27 @@
 const jwt = require("jsonwebtoken");
 
+// Tokenin sağlanıp sağlanmadığını ve geçerli olup olmadığını kontrol eden middleware
 const tokenControl = (req, res, next) => {
-  // Extract token from Authorization header
+  // Tokeni header'dan destruct etme
   let token = req.headers.authorization;
 
-  // Check if token is provided
+  // Token yoksa 401 döndür
   if (!token)
     return res.status(401).json({ status: false, message: "Unauthorized" });
 
-  // Extract token if it includes "Bearer"
+  // Token Bearer ile başlıyorsa, Bearer'ı kaldır
   if (token.startsWith("Bearer ")) {
     token = token.split(" ")[1];
   } else {
     return res.status(401).json({ status: false, message: "Unauthorized" });
   }
 
-  // Verify the token
+  // Tokeni doğrula
   jwt.verify(token, process.env.MYKEY, (err, decoded) => {
     if (err)
       return res.status(401).json({ status: false, message: "Unauthorized" });
 
-    // Attach decoded data to request object
+    // Decode edilmiş tokeni req.user'a ekle
     req.user = decoded;
     next();
   });

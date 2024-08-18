@@ -1,6 +1,10 @@
 import React from "react";
 import FlightCardItem from "./FlightCardItem";
 
+// ######################################################################
+// Anasayfada bulunan uçuş kartlarını mapleyerek oluşturur.
+// ######################################################################
+
 function FlightCardsWrapper({ flights = [] }) {
   return (
     <div className="flex flex-col gap-8">

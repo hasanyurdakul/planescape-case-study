@@ -11,6 +11,7 @@ const {
 const tokenControl = require("../middleware/auth");
 const userRouter = express.Router();
 
+// Kullanıcı kayıt olma işlemi
 userRouter.post("/register", async (req, res) => {
   try {
     const { username, email, password } = req.body;
@@ -25,6 +26,7 @@ userRouter.post("/register", async (req, res) => {
   }
 });
 
+// Kullanıcı giriş işlemi
 userRouter.post("/login", async (req, res) => {
   try {
     const { username, password } = req.body;
@@ -68,6 +70,7 @@ userRouter.post("/login", async (req, res) => {
   }
 });
 
+// Sisteme kayıtlı olan tüm kullanıcıları getirir
 userRouter.get("/getAll", tokenControl, async (req, res) => {
   try {
     const users = await User.find({});
@@ -77,6 +80,7 @@ userRouter.get("/getAll", tokenControl, async (req, res) => {
   }
 });
 
+// Kullanıcıya, belirtilen uçuşu ekler.
 userRouter.post("/addFlight", tokenControl, async (req, res) => {
   const { userId } = req.user;
   const {
@@ -133,7 +137,11 @@ userRouter.post("/addFlight", tokenControl, async (req, res) => {
   }
 });
 
+// Aşağıdaki metodlar, farklı bir kullanım şekli olan controller şeklinde yazılmıştır.
+// Kullanıcıya ait uçuşları getirir.
 userRouter.get("/flights", tokenControl, getUserFlights);
+
+// Belirtilen uçuşu kullanıcıdan kaldırır.
 userRouter.post("/flights/remove", tokenControl, removeFlight);
 
 module.exports = userRouter;

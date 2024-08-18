@@ -1,3 +1,7 @@
+// ######################################################################
+// API'dan gelen scheduleDateTime ve estimatedLandingTime olarak verilen iki tarih arasındaki farkı gün, saat, dakika ve saniye olarak hesaplar
+// ######################################################################
+
 export const dateTimeSubtractor = (scheduleDateTime, estimatedLandingTime) => {
   const scheduleDate = new Date(scheduleDateTime);
   const landingDate = new Date(estimatedLandingTime);

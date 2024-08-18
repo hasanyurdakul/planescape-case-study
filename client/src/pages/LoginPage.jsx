@@ -10,6 +10,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { userLogin } from "../redux/features/userSlice";
 import { toast } from "react-toastify";
 
+// ######################################################################
+// LoginPage componenti, login ekranını gösterir.
+// Kullanıcı, username ve password bilgilerini girerek login olabilir.
+// Kullanıcı, login olursa, localStorage'da token bilgisi saklanır ve user state'i güncellenir. Ardından toast mesajı gösterilir ve anasayfaya yönlendirilir.
+// Login işlemi başarısız olursa, hata için toast mesajı gösterilir.
+// Formik ve yup paketleri kullanarak form submit ve validation işlemleri yapılır.
+// ######################################################################
+
 const loginValidationSchema = Yup.object().shape({
   username: Yup.string()
     .required("Username is required")

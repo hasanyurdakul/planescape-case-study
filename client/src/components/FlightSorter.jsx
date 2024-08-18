@@ -12,8 +12,16 @@ import { getData } from "../utils/fetchWrapper";
 import { airlineNameParser } from "../utils/airlineNameParser";
 import { useNavigate } from "react-router-dom";
 
+// ######################################################################
+// FlightSorter componenti, uçuşları filtrelemek ve sıralamak için kullanılır.
+// Kullanıcı, uçuşları varış zamanına, havayolu şirketine ve sıralama kriterine göre filtreleyebilir.
+// Anasayfada kullanılır.
+// API'den gelen uçuşları, local state içinde filtreler. Yeni bir request yapmaz.
+// Reset Filters butonuna tıklandığında, filtreler sıfırlanır ve tüm uçuşlar gösterilir.
+// ######################################################################
+
 function FlightSorter({ flights, setFlights }) {
-  const [originalFlights, setOriginalFlights] = useState(); // State for original flights
+  const [originalFlights, setOriginalFlights] = useState();
   const [airlines, setAirlines] = useState([]);
   const [arrivalTimes, setArrivalTimes] = useState([]);
   const [selectedArrivalTime, setSelectedArrivalTime] = useState("");
@@ -40,7 +48,6 @@ function FlightSorter({ flights, setFlights }) {
   const handleSortByChange = (event) => {
     const sortBy = event.target.value;
     setSelectedSortBy(sortBy);
-    // Sort flights based on the selected criterion
     const sortedFlights = [...flights].sort((a, b) => {
       if (sortBy === "scheduleDate") {
         return new Date(a.scheduleDateTime) - new Date(b.scheduleDateTime);
@@ -71,7 +78,6 @@ function FlightSorter({ flights, setFlights }) {
       );
     }
 
-    // Sort the filtered flights based on the selected sort criteria
     const sortedFlights = filteredFlights.sort((a, b) => {
       if (selectedSortBy === "scheduleDate") {
         return new Date(a.scheduleDateTime) - new Date(b.scheduleDateTime);

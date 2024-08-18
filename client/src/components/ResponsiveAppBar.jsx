@@ -6,13 +6,11 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 import FlightIcon from "@mui/icons-material/Flight";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import PublicIcon from "@mui/icons-material/Public";
@@ -21,7 +19,11 @@ import { useNavigate } from "react-router-dom";
 import { removeToken } from "../utils/auth";
 import { userLogout } from "../redux/features/userSlice";
 
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+// ######################################################################
+// MUI'dan gelen AppBar componenti, uygulamanın üst kısmında bulunan navigasyon barıdır.
+// Uygulama içinde kullanıcı giriş yapmışsa, sağ üst köşede kullanıcı adı ve avatarı gösterilir.
+// Kullanıcı giriş yapmamışsa, sağ üst köşede "Login" butonu gösterilir.
+// ######################################################################
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -30,9 +32,6 @@ function ResponsiveAppBar() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };

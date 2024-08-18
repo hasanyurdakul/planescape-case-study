@@ -1,3 +1,7 @@
+// ######################################################################
+// Select componentinde kullanılmak üzere havaalanı kodları ve isimleri
+// ######################################################################
+
 export const airportCodes = [
   { code: "JFK", name: "John F. Kennedy International Airport" },
   { code: "LAX", name: "Los Angeles International Airport" },
