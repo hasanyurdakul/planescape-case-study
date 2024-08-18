@@ -87,7 +87,7 @@ open  -na  "Google Chrome"  --args  --disable-site-isolation-trials  --disable-w
 
 ###  Backend (server)
 
-1. .env.example dosyasından, .env dosyası oluşturun ve içindeki MONGO_URI alanını, kendi connection stringiniz ile doldurun.
+1. .env.example dosyasından, .env dosyası oluşturun ve içindeki MONGO_URI alanını, kendi connection stringiniz ile doldurun. Örnek: "mongodb+srv://***USERNAME***:***PASSWORD***@***VS***.mongodb.net/?retryWrites=true&w=majority&appName=***VS***"
 
 2.  
 ```bash
