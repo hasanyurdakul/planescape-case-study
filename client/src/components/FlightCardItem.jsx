@@ -55,7 +55,7 @@ function FlightCardItem({ flight }) {
           setArrivalLocation("Amsterdam");
           setDepartureLocation(locationData.split(",")[0] || "Unknown");
         }
-        setLoading(false); // Set loading to false once data is loaded
+        setLoading(false); // Loading spinner kaldırılır
       });
     }
   }, [flight.prefixICAO, flight.flightDirection]);

@@ -96,7 +96,7 @@ function FlightSorter({ flights, setFlights }) {
 
   useEffect(() => {
     if (flights && flights.length > 0) {
-      setOriginalFlights([...flights]); // Save the original flights
+      setOriginalFlights([...flights]);
 
       const validArrivalTimes = flights
         .map(

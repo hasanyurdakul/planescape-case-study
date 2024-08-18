@@ -26,7 +26,7 @@ function BookedFlightCard({ flight, onFlightRemoved }) {
       .then((res) => {
         console.log(res);
         toast.success("Flight removed successfully");
-        onFlightRemoved(flight._id); // Notify parent to update the state
+        onFlightRemoved(flight._id);
       })
       .catch((err) => {
         console.log(err);
