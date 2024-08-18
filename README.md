@@ -64,7 +64,7 @@ $ npm run dev
 
 4. CORS hataları alıyorsanız şu adımları izleyin:
 
-4.1. Windows kullanıyorsanız terminale aşağıdaki satırı yazın.
+4.1. Windows kullanıyorsanız terminale aşağıdaki satırı yazın ve uygulamayı açılacak yeni Chrome penceresinde deneyin.
 
 ```bash
 
@@ -72,7 +72,7 @@ chrome.exe  --user-data-dir="C:/Chrome dev session"  --disable-web-security
 
 ```
 
-4.2. Mac kullanıyorsanız terminale aşağıdaki satırı yazın.
+4.2. Mac kullanıyorsanız terminale aşağıdaki satırı yazın ve uygulamayı açılacak yeni Chrome penceresinde deneyin.
 
 ```bash
 
