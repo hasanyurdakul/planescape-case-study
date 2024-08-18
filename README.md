@@ -1,4 +1,5 @@
-
+# UYARI 
+Uygulamada, Schipnol API taradından kaynaklanan bir CORS hatası alabilirsiniz. Lütfen çözümü için Kurulum başlığına göz atın.
   
 
 #  Genel Bakış
